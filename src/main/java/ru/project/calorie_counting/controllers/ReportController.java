@@ -1,5 +1,6 @@
 package ru.project.calorie_counting.controllers;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
@@ -17,16 +18,12 @@ import ru.project.calorie_counting.services.ReportService;
 import java.time.LocalDate;
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/reports")
 @Validated
 public class ReportController {
 
     private final ReportService reportService;
-
-    @Autowired
-    public ReportController(ReportService reportService) {
-        this.reportService = reportService;
-    }
 
     // Отчет за день с суммой всех калорий и приемов пищи
     @GetMapping("/daily?userId={userId}&date={date}")

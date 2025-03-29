@@ -1,6 +1,7 @@
 package ru.project.calorie_counting.controllers;
 
 import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,16 +16,12 @@ import ru.project.calorie_counting.dtos.MealResponseDto;
 import ru.project.calorie_counting.services.MealService;
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/meal")
 @Validated
 public class MealController {
 
     private final MealService mealService;
-
-    @Autowired
-    public MealController(MealService mealService) {
-        this.mealService = mealService;
-    }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
