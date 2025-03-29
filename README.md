@@ -67,3 +67,7 @@ git remote add origin git@github.com:AveryanovaKatia/calorie-counting.git пол
   Сочетание клавиш Ctrl + C остановит программу.
 
 
+## ER диаграмма
+
+![diagram.svg](diagram.svg)
+
