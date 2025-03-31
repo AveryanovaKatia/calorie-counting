@@ -26,7 +26,7 @@ public class ReportController {
     private final ReportService reportService;
 
     // Отчет за день с суммой всех калорий и приемов пищи
-    @GetMapping("/daily?userId={userId}&date={date}")
+    @GetMapping("/daily")
     public ResponseEntity<DailyReport> getDailyReport(
                                    @RequestParam Long userId,
                                    @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date) {
