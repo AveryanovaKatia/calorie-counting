@@ -1,6 +1,6 @@
 # Calorie counting
 
-git remote add origin git@github.com:AveryanovaKatia/calorie-counting.git пользователя и учета съеденных блюд.
+REST API сервис для отслеживания дневной нормы калорий пользователя и учета съеденных блюд.
 
 ### **Основные возможности:**
 - Создание пользователей с параметрами.
